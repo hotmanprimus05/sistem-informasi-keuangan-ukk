@@ -27,7 +27,7 @@ class UserSeeder extends Seeder
         $admin = User::create([
             'nama' => 'ADMIN',
             'uuid' => Str::uuid(),
-            'email' => 'admin@pitagoras.cloud',
+            'email' => 'admin@gmail.com',
             'password' => Hash::make('password'),
             'whatsapp' => '085171737359',
             'alamat' => 'Sidoarjo'
@@ -36,7 +36,7 @@ class UserSeeder extends Seeder
         $kasir = User::create([
             'nama' => 'KASIR',
             'uuid' => Str::uuid(),
-            'email' => 'kasir@pitagoras.cloud',
+            'email' => 'kasir@gmail.com',
             'password' => Hash::make('password'),
             'whatsapp' => '085171737359',
             'alamat' => 'Sidoarjo'

@@ -1,6 +1,6 @@
 <div class="modal fade" id="modalMember" data-bs-backdrop="static" data-bs-keyboard="true" tabindex="-1"
     aria-labelledby="modalMemberLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
+    <div class="modal-dialog modal-xl">
         <div class="modal-content">
             @csrf
             <div class="modal-header">

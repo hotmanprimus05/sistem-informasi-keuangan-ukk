@@ -14,9 +14,9 @@ class PengaturanSeeder extends Seeder
     public function run(): void
     {
         Pengaturan::create([
-            'nama' => 'Pipos',
+            'nama' => 'WalHiv',
             'logo' => '',
-            'kota_id' => 3515,
+            'kota_id' => 3322,
             'alamat' => fake()->address()
         ]);
     }

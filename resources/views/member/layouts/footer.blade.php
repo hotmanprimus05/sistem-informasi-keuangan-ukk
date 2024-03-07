@@ -6,10 +6,10 @@
                 document.write(new Date().getFullYear());
             </script>
             |
-            <a href="https://pitagoras.cloud" target="_blank" class="footer-link fw-bolder">Pitagoras</a> - Version
+            <a href="#" target="_blank" class="footer-link fw-bolder">Wallet Hive</a> - Version
             {{ env('APP_VERSION') }}
         </div>
 
-        <a href="https://wa.me/6285171737359" target="_blank" class="btn btn-sm btn-outline-success"><i class='bx bxl-whatsapp float-start'></i> Developer</a>
+        <a href="https://wa.me/6285761489484" target="_blank" class="btn btn-sm btn-outline-success"><i class='bx bxl-whatsapp float-start'></i> Developer</a>
     </div>
 </footer>

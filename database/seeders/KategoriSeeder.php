@@ -13,12 +13,12 @@ class KategoriSeeder extends Seeder
      */
     public function run(): void
     {
-        Kategori::create(['kategori' => 'Pempes']);
-        Kategori::create(['kategori' => 'Susu']);
-        Kategori::create(['kategori' => 'Makanan']);
-        Kategori::create(['kategori' => 'Mainan']);
-        Kategori::create(['kategori' => 'Baju']);
-        Kategori::create(['kategori' => 'Gendongan']);
-        Kategori::create(['kategori' => 'Peralatan Makan']);
+        Kategori::create(['kategori' => 'Lab. Hardware']);
+        Kategori::create(['kategori' => 'Lab. Rpl']);
+        Kategori::create(['kategori' => 'Lab. Tkp']);
+        Kategori::create(['kategori' => 'Lab. Mm']);
+        Kategori::create(['kategori' => 'Lab. Film']);
+        Kategori::create(['kategori' => 'Lab. Kkpi']);
+        Kategori::create(['kategori' => 'Ub Jurusan']);
     }
 }

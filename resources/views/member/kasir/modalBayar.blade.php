@@ -20,12 +20,21 @@
                         </div>
                     </div>
 
-                    <div class="row mb-3">
+                    {{-- <div class="row mb-3">
                         <label class="col-sm-3 col-form-label">Tunai</label>
                         <div class="col-sm-9">
                             <input type="text" class="form-control" id="modal_bayar_input">
                         </div>
+                    </div> --}}
+
+                    <div class="row mb-3">
+                        <label class="col-sm-3 col-form-label">Tunai</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" id="modal_bayar_input">
+                            <div id="error_message" class="text-danger" style="display: none;">Tunai harus lebih besar atau sama dengan total</div>
+                        </div>
                     </div>
+
 
                     <div class="row mb-3">
                         <label class="col-sm-3 col-form-label">Kembali</label>
@@ -76,3 +85,59 @@
         </form>
     </div>
 </div>
+
+
+<script>
+    // $(document).ready(function() {
+    //     // Fungsi untuk memeriksa dan validasi input
+    //     function validatePayment() {
+    //         var total = parseFloat($('#totalAllModalValue').val());
+    //         var bayar = parseFloat($('#modal_bayar_input').val());
+    //         var error_message = $('#error_message');
+
+    //         // Memeriksa apakah bayar kurang dari total
+    //         if (bayar < total) {
+    //             error_message.show();
+    //             $('.btn-simpan').prop('disabled', true); // Disable tombol submit
+    //             return false;
+    //         } else {
+    //             error_message.hide();
+    //             $('.btn-simpan').prop('disabled', false); // Enable tombol submit
+    //             return true;
+    //         }
+    //     }
+
+    //     // Event listener untuk perubahan pada input tunai
+    //     $('#modal_bayar_input').on('input', function() {
+    //         validatePayment();
+    //     });
+
+    //     // Optional: Validasi lagi pada saat submit, sebagai lapisan validasi tambahan
+    //     $('#bayarForm').submit(function(event) {
+    //         if (!validatePayment()) {
+    //             event.preventDefault(); // Mencegah form disubmit jika validasi gagal
+    //         }
+    //     });
+    // });
+
+    $(document).ready(function() {
+    $('#modal_bayar_input').on('input change', function() { // Menambahkan event change sebagai fallback
+        validatePayment();
+    });
+});
+
+function validatePayment() {
+    var total = parseFloat($('#totalAllModalValue').val());
+    var bayar = parseFloat($('#modal_bayar_input').val().replace(/,/g, '')); // Menghilangkan koma jika ada
+    console.log("Total: ", total, "Bayar: ", bayar); // Debugging
+
+    if (!isNaN(bayar) && bayar < total) { // Menambahkan pengecekan isNaN untuk bayar
+        $('#error_message').show();
+        $('.btn-simpan').prop('disabled', true);
+    } else {
+        $('#error_message').hide();
+        $('.btn-simpan').prop('disabled', false);
+    }
+}
+
+    </script>

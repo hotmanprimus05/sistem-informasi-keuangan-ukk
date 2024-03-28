@@ -17,7 +17,8 @@ class PengaturanSeeder extends Seeder
             'nama' => 'WalHiv',
             'logo' => '',
             'kota_id' => 3322,
-            'alamat' => fake()->address()
+            // 'alamat' => fake()->address()
+            'alamat' => "Jalan Palir Raya No.66 - 68, Podorejo, Ngaliyan, Kota Semarang, Jawa Tengah 50187, Indonesia"
         ]);
     }
 }
